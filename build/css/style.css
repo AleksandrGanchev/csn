@@ -1307,6 +1307,7 @@ body {
 }
 
 .footer__support-title {
+  text-align: center;
   font-family: "AntonRegular", serif;
   font-size: 30px;
   letter-spacing: 1px;
