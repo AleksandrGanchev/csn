@@ -1267,6 +1267,7 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #fcb503;
   background: -webkit-gradient(linear, left top, left bottom, from(#fcb503), to(#e5881b));
   background: -o-linear-gradient(top, #fcb503 0%, #e5881b 100%);
   background: linear-gradient(to bottom, #fcb503 0%, #e5881b 100%);
@@ -1276,6 +1277,7 @@ body {
 }
 
 .footer__payments-text {
+  display: block;
   padding: 10px 0;
   font-size: 40px;
   font-family: "AntonRegular", serif;
@@ -1316,6 +1318,7 @@ body {
 }
 
 .footer__support-number {
+  display: block;
   font-size: 15px;
   padding-bottom: 8px;
   font-family: "RobotoRegular", serif;
@@ -1494,6 +1497,7 @@ body {
 .reason__text {
   max-width: 305px;
   width: 100%;
+  min-height: 28px;
   font-family: "LatoRegular", serif;
   text-align: center;
   font-size: 24px;
@@ -1506,11 +1510,6 @@ body {
 }
 
 @media (max-width: 1920px) {
-  .btn a {
-    font-size: -webkit-calc(0.6px + 35.4 * (100vw / 1920));
-    font-size: calc(0.6px + 35.4 * (100vw / 1920));
-  }
-
   .banner__exclusive-text {
     font-size: -webkit-calc(5px + 37 * (100vw / 1920));
     font-size: calc(5px + 37 * (100vw / 1920));
@@ -1533,6 +1532,10 @@ body {
 }
 
 @media (max-width: 1200px) {
+  .btn a {
+    font-size: 22px;
+  }
+
   .btn {
     padding: 5px;
     max-width: 215px;
@@ -1572,6 +1575,11 @@ body {
 }
 
 @media (max-width: 768px) {
+  .btn a {
+    padding-top: 2px;
+    font-size: 13.5px;
+  }
+
   .btn {
     max-width: 135px;
     height: 46px;
@@ -1607,10 +1615,14 @@ body {
   }
 
   .banner__girl-left-wrapper {
+    max-width: 79.1px;
+    width: 100%;
     margin-top: 60px;
   }
 
   .banner__girl-right-wrapper {
+    max-width: 101.8px;
+    width: 100%;
     margin-top: 60px;
   }
 
