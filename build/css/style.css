@@ -1267,7 +1267,7 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #fcb503;
+  background: #fcb503;
   background: -webkit-gradient(linear, left top, left bottom, from(#fcb503), to(#e5881b));
   background: -o-linear-gradient(top, #fcb503 0%, #e5881b 100%);
   background: linear-gradient(to bottom, #fcb503 0%, #e5881b 100%);
@@ -1282,6 +1282,7 @@ body {
   font-size: 40px;
   font-family: "AntonRegular", serif;
   text-align: center;
+  color: #fcb503;
 }
 
 .footer__payments {
@@ -1323,6 +1324,7 @@ body {
   padding-bottom: 8px;
   font-family: "RobotoRegular", serif;
   text-align: center;
+  text-decoration: none;
 }
 
 .footer__support-social-wrapper {
@@ -1576,7 +1578,7 @@ body {
 
 @media (max-width: 768px) {
   .btn a {
-    padding-top: 2px;
+    padding-top: 3px;
     font-size: 13.5px;
   }
 
