@@ -1480,6 +1480,10 @@ body {
   padding-bottom: 20px;
 }
 
+.reason__chip-item-wrapper:nth-child(1) > h6 {
+  max-width: 290px;
+}
+
 .reason__chip-item {
   position: relative;
   display: -webkit-box;
@@ -1495,6 +1499,10 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding-bottom: 25px;
+}
+
+.reason__chip-item > h6 {
+  max-width: 290px;
 }
 
 .reason__chip-number {
