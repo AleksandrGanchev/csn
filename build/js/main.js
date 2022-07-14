@@ -1,33 +1,97 @@
 "use strict";
 
-function shiftLeft() {
-  var boxes = document.querySelectorAll(".experience__box");
-  var tmpNode = boxes[0];
-  boxes[0].className = "experience__box move-out-from-left";
-  setTimeout(function () {
-    boxes[1].className = "experience__box move-to-position1-from-left";
-    boxes[2].className = "experience__box move-to-position2-from-left";
-    boxes[3].className = "experience__box move-to-position3-from-left";
-    boxes[4].className = "experience__box move-to-position4-from-left";
-    boxes[0].remove();
-    document.querySelector(".experience__cards-container").appendChild(tmpNode);
-  }, 500);
+addBtag();
+document.addEventListener("DOMContentLoaded", function () {
+  appearanceChips();
+  swiper();
+});
+
+function addBtag() {
+  var hrefLanding = window.location.href,
+      btag = hrefLanding.split("btag=")[1],
+      link = document.querySelectorAll("a");
+
+  if (btag) {
+    link.forEach(function (item) {
+      var itemHref = item.getAttribute("href");
+      item.setAttribute("href", itemHref + "&btag=" + btag);
+    });
+  }
 }
 
-function shiftRight() {
-  var boxes = document.querySelectorAll(".experience__box");
-  boxes[4].className = "experience__box move-out-from-right";
-  setTimeout(function () {
-    var noOfCards = boxes.length;
-    var tmpNode = boxes[noOfCards - 1];
-    tmpNode.classList.remove("experience__box--hide");
-    boxes[noOfCards - 1].remove();
-    var parentObj = document.querySelector(".experience__cards-container");
-    parentObj.insertBefore(tmpNode, parentObj.firstChild);
-    tmpNode.className = "experience__box move-to-position1-from-right";
-    boxes[0].className = "experience__box move-to-position2-from-right";
-    boxes[1].className = "experience__box move-to-position3-from-right";
-    boxes[2].className = "experience__box move-to-position4-from-right";
-    boxes[3].className = "experience__box move-to-position5-from-right";
-  }, 500);
+function appearanceChips() {
+  var sectionReason = document.querySelector(".reason"),
+      chipItem = document.querySelectorAll(".reason__chip-item-wrapper"),
+      chipItemText = document.querySelectorAll(".reason__text");
+  var sectionHeightTop = sectionReason.getBoundingClientRect().top;
+  var alreadyDone = false;
+  window.addEventListener("scroll", function () {
+    if (document.documentElement.clientWidth >= 992) {
+      if (!alreadyDone && window.pageYOffset >= sectionHeightTop) {
+        chipItem.forEach(function (item) {
+          item.style.cssText = "animation: backInLeftChips 1s forwards;";
+        });
+        chipItemText.forEach(function (item) {
+          item.style.cssText = "animation: backInLeftChips 1s forwards;";
+        });
+        alreadyDone = true;
+      }
+    } else if (!alreadyDone && window.pageYOffset + 200 >= sectionHeightTop) {
+      chipItem.forEach(function (item) {
+        item.style.cssText = "animation: backInLeftChips 1s forwards;";
+      });
+      chipItemText.forEach(function (item) {
+        item.style.cssText = "animation: backInLeftChips 1s forwards;";
+      });
+      alreadyDone = true;
+    }
+  });
+}
+
+function swiper() {
+  var swiper = new Swiper(".mySwiper", {
+    preloadImages: false,
+    lazy: true,
+    effect: "coverflow",
+    grabCursor: true,
+    slidesPerView: "auto",
+    centeredSlides: true,
+    loop: true,
+    speed: 2000,
+    // zoom: {
+    //   maxRatio: 1.5,
+    // },
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true
+    },
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3
+      },
+      1920: {
+        centeredSlides: true,
+        slidesPerView: "auto"
+      }
+    }
+  }); // const swiperSlide = document.getElementsByClassName("swiper-slide");
+  // for (let i = 0; i < swiperSlide.length; i++) {
+  //   swiperSlide[i].addEventListener("mouseover", function (e) {
+  //     swiper.zoom.in();
+  //   });
+  //   swiperSlide[i].addEventListener("mouseout", function (e) {
+  //     swiper.zoom.out();
+  //   });
+  // }
 }
