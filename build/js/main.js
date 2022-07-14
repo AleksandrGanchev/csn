@@ -1,23 +1,20 @@
 "use strict";
 
-addBtag();
+var hrefLanding = window.location.href,
+    btag = hrefLanding.split("btag=")[1],
+    link = document.querySelectorAll("a");
+
+if (btag) {
+  link.forEach(function (item) {
+    var itemHref = item.getAttribute("href");
+    item.setAttribute("href", itemHref + "&btag=" + btag);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   appearanceChips();
   swiper();
 });
-
-function addBtag() {
-  var hrefLanding = window.location.href,
-      btag = hrefLanding.split("btag=")[1],
-      link = document.querySelectorAll("a");
-
-  if (btag) {
-    link.forEach(function (item) {
-      var itemHref = item.getAttribute("href");
-      item.setAttribute("href", itemHref + "&btag=" + btag);
-    });
-  }
-}
 
 function appearanceChips() {
   var sectionReason = document.querySelector(".reason"),
@@ -50,11 +47,12 @@ function appearanceChips() {
 
 function swiper() {
   var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
     preloadImages: false,
     lazy: true,
-    effect: "coverflow",
     grabCursor: true,
     slidesPerView: "auto",
+    watchSlidesProgress: "true",
     centeredSlides: true,
     loop: true,
     speed: 2000,
