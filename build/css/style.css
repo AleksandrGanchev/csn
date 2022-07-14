@@ -610,7 +610,7 @@ body {
 .banner {
   min-height: 1050px;
   padding-top: 20px;
-  background: url(./../img/banner-bg.png) center no-repeat;
+  background: url(./../img/banner-bg.webp) center no-repeat;
   background-size: cover;
 }
 
@@ -791,7 +791,7 @@ body {
 .banner__center-block {
   width: 100%;
   height: 367px;
-  background: url(./../img/center-block.png) top no-repeat;
+  background: url(./../img/center-block.webp) top no-repeat;
   background-size: contain;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1097,7 +1097,7 @@ body {
 .reason {
   margin-top: -490px;
   min-height: 1202px;
-  background: url(./../img/reason-bg.png) center no-repeat;
+  background: url(./../img/reason-bg.webp) center no-repeat;
   background-size: cover;
 }
 
@@ -1656,7 +1656,7 @@ body {
   }
 
   .banner {
-    background: url(./../img/banner-bg-tablet.png) center no-repeat;
+    background: url(./../img/banner-bg-tablet.webp) center no-repeat;
     min-height: 530px;
     background-position: top;
   }
@@ -1813,7 +1813,7 @@ body {
 
   .reason {
     min-height: 460px;
-    background: url(./../img/reason-bg-tablet.png) center no-repeat;
+    background: url(./../img/reason-bg-tablet.webp) center no-repeat;
     margin-top: -160px;
   }
 
