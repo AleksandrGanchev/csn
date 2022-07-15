@@ -345,15 +345,15 @@ template {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("TrajanProRegular"), local("Trajan-Pro-Regular"), url("../fonts/Trajan-Pro-Regular.woff2") format("woff2"), url("../fonts/Trajan-Pro-Regular.woff") format("woff");
+  src: local("TrajanProRegular"), local("TrajanProRegular"), url("../fonts/Trajan-Pro-Regular.woff2") format("woff2"), url("../fonts/Trajan-Pro-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "TrajanProSemiBold";
-  font-style: normal;
+  src: url("../fonts/Trajan-Pro-SemiBold.ttf") format("truetype");
   font-weight: 600;
-  font-display: swap;
-  src: local("TrajanProSemiBold"), local("TrajanProSemiBold"), url("../fonts/Trajan-Pro-Semi-Bold.woff2") format("woff2"), url("../fonts/Trajan-Pro-Semi-Bold.woff") format("woff");
+  font-style: normal;
+  font-display: fallback;
 }
 
 @font-face {
@@ -366,10 +366,10 @@ template {
 
 @font-face {
   font-family: "MyriadProRegular";
-  font-style: normal;
+  src: url("../fonts/MyriadPro-Regular.ttf") format("truetype");
   font-weight: 400;
-  font-display: swap;
-  src: local("MyriadProRegular"), local("MyriadProRegular"), url("../fonts/Myriad-Pro-Regular.woff2") format("woff2"), url("../fonts/Myriad-Pro-Regular.woff") format("woff");
+  font-style: normal;
+  font-display: fallback;
 }
 
 @font-face {
@@ -406,10 +406,10 @@ template {
 
 @font-face {
   font-family: "PtSansRegular";
-  font-style: normal;
+  src: url("../fonts/Pt-sans-regular.ttf") format("truetype");
   font-weight: 400;
-  font-display: swap;
-  src: local("PtSansRegular"), local("PtSansRegular"), url("../fonts/Pt-Sans-Regular.woff2") format("woff2"), url("../fonts/Pt-Sans-Regular.woff") format("woff");
+  font-style: normal;
+  font-display: fallback;
 }
 
 * {
