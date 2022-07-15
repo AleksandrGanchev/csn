@@ -353,7 +353,7 @@ template {
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: local("Trajan Pro Semi Bold"), local("Trajan-Pro-Semi-Bold"), url("../fonts/Trajan-Pro-Semi-Bold.woff2") format("woff2"), url("../fonts/Trajan-Pro-Semi-Bold.woff") format("woff");
+  src: local("TrajanProSemiBold"), local("TrajanProSemiBold"), url("../fonts/Trajan-Pro-Semi-Bold.woff2") format("woff2"), url("../fonts/Trajan-Pro-Semi-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -699,7 +699,7 @@ body {
   padding-top: 1px;
   text-transform: uppercase;
   font-size: 18px;
-  font-family: "TrajanProRegular";
+  font-family: "TrajanProRegular", serif;
   text-shadow: 0px 5px 2.48px rgba(0, 1, 0, 0.33);
   letter-spacing: 3.5px;
   text-align: center;
@@ -809,7 +809,7 @@ body {
 }
 
 .banner__exclusive-text {
-  font-family: "CookieRegular";
+  font-family: "CookieRegular", serif;
   font-size: 42px;
   padding-bottom: 10px;
   letter-spacing: 3px;
@@ -826,7 +826,7 @@ body {
 
 .banner__deposit-text {
   position: relative;
-  font-family: "TrajanProSemiBold";
+  font-family: "TrajanProSemiBold", serif;
   text-transform: uppercase;
   text-align: center;
   line-height: 1.4;
@@ -868,7 +868,7 @@ body {
 
 .banner__live-casino-text {
   position: relative;
-  font-family: "LatoRegular";
+  font-family: "LatoRegular", serif;
   padding-bottom: 25px;
   text-align: center;
   z-index: 4;
@@ -926,7 +926,7 @@ body {
 }
 
 .experience__subtitle {
-  font-family: "PtSansRegular";
+  font-family: "PtSansRegular", serif;
   letter-spacing: 1.5px;
   font-size: 38px;
   text-align: center;
@@ -987,7 +987,7 @@ body {
   display: block;
   padding: 10px 0;
   font-size: 40px;
-  font-family: "AntonRegular", serif;
+  font-family: "AntonRegular", sans-serif;
   text-align: center;
   color: #fcb503;
 }
