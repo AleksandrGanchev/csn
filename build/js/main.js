@@ -14,6 +14,7 @@ if (btag) {
 document.addEventListener("DOMContentLoaded", function () {
   appearanceChips();
   swiper();
+  zoomSlide();
 });
 
 function appearanceChips() {
@@ -52,13 +53,9 @@ function swiper() {
     lazy: true,
     grabCursor: true,
     slidesPerView: "auto",
-    watchSlidesProgress: "true",
     centeredSlides: true,
     loop: true,
     speed: 2000,
-    // zoom: {
-    //   maxRatio: 1.5,
-    // },
     coverflowEffect: {
       rotate: 50,
       stretch: 0,
@@ -76,20 +73,26 @@ function swiper() {
     },
     breakpoints: {
       768: {
-        slidesPerView: 3
+        slidesPerView: 3,
+        allowTouchMove: false
       },
       1920: {
+        allowTouchMove: false,
         centeredSlides: true,
         slidesPerView: "auto"
       }
     }
-  }); // const swiperSlide = document.getElementsByClassName("swiper-slide");
-  // for (let i = 0; i < swiperSlide.length; i++) {
-  //   swiperSlide[i].addEventListener("mouseover", function (e) {
-  //     swiper.zoom.in();
-  //   });
-  //   swiperSlide[i].addEventListener("mouseout", function (e) {
-  //     swiper.zoom.out();
-  //   });
-  // }
+  });
+}
+
+function zoomSlide() {
+  var swiperSlide = document.querySelectorAll(".swiper-lazy");
+
+  if (window.screen.width <= 768) {
+    swiperSlide.forEach(function (slide) {
+      slide.addEventListener("click", function () {
+        slide.classList.toggle("zoom");
+      });
+    });
+  }
 }
