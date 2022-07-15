@@ -2519,10 +2519,6 @@ button.swiper-pagination-bullet {
     top: 30%;
     width: 25px;
   }
-
-  .banner__cube_left {
-    display: none;
-  }
 }
 
 @media (max-width: 820px) {
@@ -2927,6 +2923,10 @@ button.swiper-pagination-bullet {
   .banner__cube_right {
     top: 43%;
     left: 45%;
+  }
+
+  .banner__cube_left {
+    display: none;
   }
 }
 
