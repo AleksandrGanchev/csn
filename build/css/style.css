@@ -342,26 +342,74 @@ template {
 
 @font-face {
   font-family: "TrajanProRegular";
-  src: url("../fonts/Trajan-Pro-Regular.ttf") format("truetype");
-  font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-weight: 400;
+  font-display: swap;
+  src: local("TrajanProRegular"), local("Trajan-Pro-Regular"), url("../fonts/Trajan-Pro-Regular.woff2") format("woff2"), url("../fonts/Trajan-Pro-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "TrajanProSemiBold";
-  src: url("../fonts/Trajan-Pro-SemiBold.ttf") format("truetype");
-  font-weight: 600;
   font-style: normal;
-  font-display: fallback;
+  font-weight: 600;
+  font-display: swap;
+  src: local("TrajanProSemiBold"), local("TrajanProSemiBold"), url("../fonts/Trajan-Pro-Semi-Bold.woff2") format("woff2"), url("../fonts/Trajan-Pro-Semi-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "CookieRegular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("CookieRegular"), local("CookieRegular"), url("../fonts/Cookie-Regular.woff2") format("woff2"), url("../fonts/Cookie-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "MyriadProRegular";
-  src: url("../fonts/MyriadPro-Regular.ttf") format("truetype");
-  font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-weight: 400;
+  font-display: swap;
+  src: local("MyriadProRegular"), local("MyriadProRegular"), url("../fonts/Myriad-Pro-Regular.woff2") format("woff2"), url("../fonts/Myriad-Pro-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "LatoRegular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("LatoRegular"), local("LatoRegular"), url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AntonRegular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("AntonRegular"), local("AntonRegular"), url("../fonts/Anton-Regular.woff2") format("woff2"), url("../fonts/Anton-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "RobotoRegular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("RobotoRegular"), local("Roboto-Regular"), url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "RobotoBold";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("RobotoBold"), local("RobotoBold"), url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PtSansRegular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("PtSansRegular"), local("PtSansRegular"), url("../fonts/Pt-Sans-Regular.woff2") format("woff2"), url("../fonts/Pt-Sans-Regular.woff") format("woff");
 }
 
 * {
@@ -761,8 +809,7 @@ body {
 }
 
 .banner__exclusive-text {
-  font-family: "Cookie", serif;
-  font-weight: 400;
+  font-family: "CookieRegular";
   font-size: 42px;
   padding-bottom: 10px;
   letter-spacing: 3px;
@@ -779,7 +826,7 @@ body {
 
 .banner__deposit-text {
   position: relative;
-  font-family: "TrajanProSemiBold", serif;
+  font-family: "TrajanProSemiBold";
   text-transform: uppercase;
   text-align: center;
   line-height: 1.4;
@@ -821,8 +868,7 @@ body {
 
 .banner__live-casino-text {
   position: relative;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-family: "LatoRegular";
   padding-bottom: 25px;
   text-align: center;
   z-index: 4;
@@ -880,8 +926,7 @@ body {
 }
 
 .experience__subtitle {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
+  font-family: "PtSansRegular";
   letter-spacing: 1.5px;
   font-size: 38px;
   text-align: center;
@@ -942,8 +987,7 @@ body {
   display: block;
   padding: 10px 0;
   font-size: 40px;
-  font-family: "Anton", sans-serif;
-  font-weight: 400;
+  font-family: "AntonRegular", serif;
   text-align: center;
   color: #fcb503;
 }
@@ -971,8 +1015,7 @@ body {
 
 .footer__support-title {
   text-align: center;
-  font-family: "Anton", sans-serif;
-  font-weight: 400;
+  font-family: "AntonRegular", sans-serif;
   font-size: 30px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -983,8 +1026,7 @@ body {
   display: block;
   font-size: 15px;
   padding-bottom: 8px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-family: "RobotoRegular", sans-serif;
   text-align: center;
   text-decoration: none;
 }
@@ -1021,8 +1063,7 @@ body {
 .footer__navigation {
   font-size: 14.6px;
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
+  font-family: "RobotoBold", sans-serif;
   text-decoration: none;
   margin-right: 30px;
 }
@@ -1038,8 +1079,7 @@ body {
 .footer__powered {
   text-align: center;
   font-size: 13px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-family: "RobotoRegular", serif;
 }
 
 @-webkit-keyframes shine {
@@ -1272,8 +1312,7 @@ body {
   max-width: 305px;
   width: 100%;
   min-height: 28px;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-family: "LatoRegular", serif;
   text-align: center;
   font-size: 24px;
 }
