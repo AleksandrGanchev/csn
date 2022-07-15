@@ -353,7 +353,7 @@ template {
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: local("TrajanProSemiBold"), local("TrajanProSemiBold"), url("../fonts/Trajan-Pro-Semi-Bold.woff2") format("woff2"), url("../fonts/Trajan-Pro-Semi-Bold.woff") format("woff");
+  src: local("Trajan Pro Semi Bold"), local("Trajan-Pro-Semi-Bold"), url("../fonts/Trajan-Pro-Semi-Bold.woff2") format("woff2"), url("../fonts/Trajan-Pro-Semi-Bold.woff") format("woff");
 }
 
 @font-face {
