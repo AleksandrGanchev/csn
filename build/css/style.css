@@ -342,10 +342,10 @@ template {
 
 @font-face {
   font-family: "TrajanProRegular";
-  font-style: normal;
+  src: url("../fonts/Trajan-Pro-Regular.ttf") format("truetype");
   font-weight: 400;
-  font-display: swap;
-  src: local("TrajanProRegular"), local("TrajanProRegular"), url("../fonts/Trajan-Pro-Regular.woff2") format("woff2"), url("../fonts/Trajan-Pro-Regular.woff") format("woff");
+  font-style: normal;
+  font-display: fallback;
 }
 
 @font-face {
@@ -358,10 +358,10 @@ template {
 
 @font-face {
   font-family: "CookieRegular";
-  font-style: normal;
+  src: url("../fonts/Cookie-Regular.ttf") format("truetype");
   font-weight: 400;
-  font-display: swap;
-  src: local("CookieRegular"), local("CookieRegular"), url("../fonts/Cookie-Regular.woff2") format("woff2"), url("../fonts/Cookie-Regular.woff") format("woff");
+  font-style: normal;
+  font-display: fallback;
 }
 
 @font-face {
@@ -374,34 +374,34 @@ template {
 
 @font-face {
   font-family: "LatoRegular";
-  font-style: normal;
+  src: url("../fonts/Lato-Regular.ttf") format("truetype");
   font-weight: 400;
-  font-display: swap;
-  src: local("LatoRegular"), local("LatoRegular"), url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff");
+  font-style: normal;
+  font-display: fallback;
 }
 
 @font-face {
   font-family: "AntonRegular";
-  font-style: normal;
+  src: url("../fonts/Anton-Regular.ttf") format("truetype");
   font-weight: 400;
-  font-display: swap;
-  src: local("AntonRegular"), local("AntonRegular"), url("../fonts/Anton-Regular.woff2") format("woff2"), url("../fonts/Anton-Regular.woff") format("woff");
+  font-style: normal;
+  font-display: fallback;
 }
 
 @font-face {
   font-family: "RobotoRegular";
-  font-style: normal;
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
-  font-display: swap;
-  src: local("RobotoRegular"), local("Roboto-Regular"), url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-style: normal;
+  font-display: fallback;
 }
 
 @font-face {
   font-family: "RobotoBold";
-  font-style: normal;
+  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
   font-weight: 600;
-  font-display: swap;
-  src: local("RobotoBold"), local("RobotoBold"), url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
+  font-style: normal;
+  font-display: fallback;
 }
 
 @font-face {
@@ -699,7 +699,7 @@ body {
   padding-top: 1px;
   text-transform: uppercase;
   font-size: 18px;
-  font-family: "TrajanProRegular", serif;
+  font-family: "TrajanProRegular";
   text-shadow: 0px 5px 2.48px rgba(0, 1, 0, 0.33);
   letter-spacing: 3.5px;
   text-align: center;
@@ -809,7 +809,8 @@ body {
 }
 
 .banner__exclusive-text {
-  font-family: "CookieRegular", serif;
+  font-family: "Cookie", sans-serif;
+  font-weight: 400;
   font-size: 42px;
   padding-bottom: 10px;
   letter-spacing: 3px;
@@ -868,7 +869,8 @@ body {
 
 .banner__live-casino-text {
   position: relative;
-  font-family: "LatoRegular", serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
   padding-bottom: 25px;
   text-align: center;
   z-index: 4;
@@ -926,7 +928,8 @@ body {
 }
 
 .experience__subtitle {
-  font-family: "PtSansRegular", serif;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
   letter-spacing: 1.5px;
   font-size: 38px;
   text-align: center;
@@ -987,7 +990,8 @@ body {
   display: block;
   padding: 10px 0;
   font-size: 40px;
-  font-family: "AntonRegular", sans-serif;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
   text-align: center;
   color: #fcb503;
 }
@@ -1015,7 +1019,8 @@ body {
 
 .footer__support-title {
   text-align: center;
-  font-family: "AntonRegular", sans-serif;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
   font-size: 30px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -1026,7 +1031,8 @@ body {
   display: block;
   font-size: 15px;
   padding-bottom: 8px;
-  font-family: "RobotoRegular", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   text-align: center;
   text-decoration: none;
 }
@@ -1063,7 +1069,8 @@ body {
 .footer__navigation {
   font-size: 14.6px;
   text-transform: uppercase;
-  font-family: "RobotoBold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
   text-decoration: none;
   margin-right: 30px;
 }
@@ -1079,7 +1086,8 @@ body {
 .footer__powered {
   text-align: center;
   font-size: 13px;
-  font-family: "RobotoRegular", serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 @-webkit-keyframes shine {
@@ -1312,7 +1320,8 @@ body {
   max-width: 305px;
   width: 100%;
   min-height: 28px;
-  font-family: "LatoRegular", serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
   text-align: center;
   font-size: 24px;
 }
