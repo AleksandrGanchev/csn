@@ -12,39 +12,9 @@ if (btag) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  appearanceChips();
   swiper();
   zoomSlide();
 });
-
-function appearanceChips() {
-  var sectionReason = document.querySelector(".reason"),
-      chipItem = document.querySelectorAll(".reason__chip-item-wrapper"),
-      chipItemText = document.querySelectorAll(".reason__text");
-  var sectionHeightTop = sectionReason.getBoundingClientRect().top;
-  var alreadyDone = false;
-  window.addEventListener("scroll", function () {
-    if (document.documentElement.clientWidth >= 992) {
-      if (!alreadyDone && window.pageYOffset >= sectionHeightTop) {
-        chipItem.forEach(function (item) {
-          item.style.cssText = "animation: backInLeftChips 1s forwards;";
-        });
-        chipItemText.forEach(function (item) {
-          item.style.cssText = "animation: backInLeftChips 1s forwards;";
-        });
-        alreadyDone = true;
-      }
-    } else if (!alreadyDone && window.pageYOffset + 200 >= sectionHeightTop) {
-      chipItem.forEach(function (item) {
-        item.style.cssText = "animation: backInLeftChips 1s forwards;";
-      });
-      chipItemText.forEach(function (item) {
-        item.style.cssText = "animation: backInLeftChips 1s forwards;";
-      });
-      alreadyDone = true;
-    }
-  });
-}
 
 function swiper() {
   var swiper = new Swiper(".mySwiper", {
